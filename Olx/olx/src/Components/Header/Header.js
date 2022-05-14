@@ -1,14 +1,28 @@
-import React from "react";
+import React,{useState} from "react";
 import "./Header.css";
+import OlxLogo from '../../assets/OlxLogo'
+import Search from '../../assets/Search'
+import Arrow from '../../assets/Arrow'
 
-function Header() {
+function Header({active,setActive}) {
+
   return (
-    <div className="wrapper">
+    <div className="wrapper shadow">
       <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            Navbar
-          </a>
+          <div className="navbar-brand nav-logo ">
+            <OlxLogo/>
+          </div>
+          <div className={`place-search ${active}`}>
+              <Search/>
+              <input onClick={()=>{
+                  setActive("border")
+              }} placeholder="India" className="ml-3 search-input"  type="text" />
+              <Arrow/>
+          </div>
+          <div className="items-search">
+              <input type="text" placeholder="Find car,mobile phone and more..." />
+          </div>
           <button
             className="navbar-toggler"
             type="button"

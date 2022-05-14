@@ -1,3 +1,21 @@
 .wrapper{
     background: whitesmoke;
+    height: 70px;
+}
+.nav-logo{
+    margin-left: 100px;
+    cursor: pointer;
+}
+.place-search{
+    background-color: white;
+    padding: 10px;
+    border: 2px solid black;
+}
+.search-input{
+    border: none;
+    outline: none;
+    height: 100;
+}
+.border{
+    border: 2px solid red !important;
 }
