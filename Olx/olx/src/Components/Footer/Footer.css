@@ -1,0 +1,33 @@
+li{
+    list-style: none;
+    color: rgb(92, 91, 91);
+    font-size: 15px;
+}
+.footerParentDiv {
+    width: 100%;
+    background: #ebeeef;
+  }
+  /* .footerParentDiv .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+  } */
+  .footerParentDiv .content .heading {
+    font-size: 22px;
+    font-weight: bolder;
+  }
+  
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #002f34;
+    color: whitesmoke;
+  }
+  
+.footer p {
+    margin: 0;
+  }
+  
