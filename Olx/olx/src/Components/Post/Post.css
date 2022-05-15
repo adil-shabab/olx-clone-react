@@ -1,18 +1,17 @@
 .moreView {
-    margin: 16px 16px 24px;
+    margin: 10px 0px;
     padding: 16px 16px 32px;
     background-color: #ebeeef;
     border-radius: 4px;
   }
   
   .heading {
-    display: flex;
     justify-content: space-between;
-    align-items: center;
     width: 100%;
   }
   .heading :first-child {
-    font-size: 24px;
+    font-size: 1.5em;
+    font-weight: bold;
     color: #002f34;
   }
   
@@ -24,12 +23,13 @@
   .card {
     padding: 13px;
     display: inline-block;
-    cursor: pointer;
     background: transparent;
     border: none;
     outline: none;
   }
-  
+  .card-child{
+      cursor: pointer;
+  }
   .card .favorite {
     display: flex;
     justify-content: flex-end;
