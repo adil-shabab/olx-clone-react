@@ -35,4 +35,6 @@
     justify-content: center;
     cursor: pointer;
   }
-  
+  .signup-container a:hover{
+      color: rgb(111, 111, 208) !important;
+  }
