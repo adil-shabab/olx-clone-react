@@ -1,7 +1,8 @@
-.login-container {
+.signup-container {
     border: 1px solid black;
     width: max-content;
-    padding: 50px;
+    padding: 0px 50px;
+    padding-bottom: 10px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -9,32 +10,29 @@
     border-radius: 6px;
   }
   
-  .login-container .input {
+  .signup-container .input {
     border-top-color: transparent;
     border-left-color: transparent;
     border-right-color: transparent;
     outline-color: transparent;
   }
   
-  .login-container button {
+  .signup-container button {
     width: 100%;
     height: 48px;
     background-color: #002f34;
     color: whitesmoke;
     font-weight: 900;
   }
-  .login-container button:hover {
+  .signup-container button:hover {
     background-color: white;
     color: #002f34;
     border: 2px solid #002f34;
   }
   
-  .login-container a {
+  .signup-container a {
     display: flex;
     justify-content: center;
     cursor: pointer;
-  }
-  .login-container a:hover{
-      color: rgb(50, 50, 178) !important;
   }
   
