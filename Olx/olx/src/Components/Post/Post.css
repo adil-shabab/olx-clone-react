@@ -20,21 +20,14 @@
     font-size: 14px;
     color: #002f34;
   }
-  
-  /* .recommendations .cards {
-    display: flex;
-  } */
-  
-  /* .moreView .cards {
-    white-space: nowrap;
-    overflow-x: scroll;
-    overflow-y: hidden;
-  }
-   */
+
   .card {
     padding: 13px;
     display: inline-block;
     cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
   }
   
   .card .favorite {
@@ -73,12 +66,12 @@
     font-size: small;
   }
   
-  .recommendations {
+  /* .recommendations {
     margin: 16px 16px 24px;
   }
   
   .recommendations .heading span {
     font-size: 24px;
     color: #002f34;
-  }
+  } */
   
