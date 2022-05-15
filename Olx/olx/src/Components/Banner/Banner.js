@@ -1,6 +1,7 @@
 import React from 'react'
 import './Banner.css'
-// import Arrow from '../../assets/Arrow'
+
+
 function Banner() {
   return (
     <div className="banner-container container">
@@ -21,14 +22,7 @@ function Banner() {
             <span>Smart Watch</span>
           </div>
         </div>
-        <div className="banner">
-          <img
-            src="../../../Images/banner copy.png"
-            alt=""
-          />
-        </div>
       </div>
-      
     </div>
   )
 }

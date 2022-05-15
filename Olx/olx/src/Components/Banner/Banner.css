@@ -32,13 +32,6 @@
       color: rgb(249, 118, 118);
   }
   
-  .banner-child .banner {
-    position: relative;
-    width: 100vw;
-  }
-  .banner-child .banner img{
-    width: 100vw;
-  }
   
   
   @media only screen and (max-width: 997px) {
