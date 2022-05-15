@@ -1,10 +1,10 @@
 import React from 'react'
 import Header from '../Components/Header/Header'
 
-function Home({active,setActive}) {
+function Home() {
   return (
     <div>
-        <Header active={active} setActive={setActive} />
+        <Header />
     </div>
   )
 }

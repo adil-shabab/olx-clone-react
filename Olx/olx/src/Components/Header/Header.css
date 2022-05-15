@@ -1,21 +1,43 @@
-.wrapper{
-    background: whitesmoke;
-    height: 70px;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.nav-logo{
-    margin-left: 100px;
-    cursor: pointer;
+.location-search{
+    position: relative;
 }
-.place-search{
-    background-color: white;
-    padding: 10px;
+.location-search input{
     border: 2px solid black;
+    border-radius: 7px;
+    height: 45px;
+    padding-left: 35px;
 }
-.search-input{
-    border: none;
-    outline: none;
-    height: 100;
+.location-search i{
+    position: absolute;
 }
-.border{
-    border: 2px solid red !important;
+.location-search .search{
+    left: 0;
+    padding: 15px 10px;
+}
+.location-search .arrow{
+    right: 0;
+    padding: 15px 10px;
+}
+.items-search{
+    position: relative;
+    width: 50%;
+}
+.items-search .search-items{
+    position: absolute;
+    right: 0;
+    top: 0;
+    
+    background: #000;
+}
+.items-search input{
+    border: 2px solid black;
+    height: 45px;
+    border-radius: 8px;
+    margin-left: 10px;
+    width: 100%;
 }
