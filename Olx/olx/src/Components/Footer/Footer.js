@@ -7,8 +7,9 @@ function Footer() {
   return (
     <div>
         <div className="footerParentDiv row m-0">
-      <div className="content container-fluid pt-3 col-xlg-2 col-lg-3 col-md-3 col-sm-6 col-xsm-12">
-          <div className="heading">
+      <div className='content container-fluid p-1 mt-2 mb-2 pt-3 col-xlg-2 col-lg-3 col-md-3 col-sm-6 col-xsm-12'>
+      <div className="box pt-3 shadow w-100">
+          <div className="heading d-flex align-items-center justify-content-center">
             <p>POPULAR LOCATIONS</p>
           </div>
           <div className="list">
@@ -20,8 +21,10 @@ function Footer() {
             </ul>
           </div>
       </div>
-      <div className="content container-fluid pt-3 col-xlg-2 col-lg-3 col-md-3 col-sm-6 col-xsm-12">
-          <div className="heading">
+      </div>
+      <div className="content container-fluid mt-2 mb-2 pt-3 col-xlg-2 col-lg-3 col-md-3 col-sm-6 col-xsm-12">
+          <div className='box pt-3 shadow w-100'>
+          <div className="heading d-flex align-items-center justify-content-center">
             <p>TRENDING LOCATIONS</p>
           </div>
           <div className="list">
@@ -32,9 +35,11 @@ function Footer() {
               <li>Nashik</li>
             </ul>
           </div>
+          </div>
       </div>
-      <div className="content container-fluid pt-3 col-xlg-2 col-lg-3 col-md-3 col-sm-6 col-xsm-12">
-          <div className="heading">
+      <div className="content container-fluid mt-2 mb-2 pt-3 col-xlg-2 col-lg-3 col-md-3 col-sm-6 col-xsm-12">
+          <div className='box pt-3 shadow w-100'>
+          <div className="heading d-flex align-items-center justify-content-center">
             <p>ABOUT US</p>
           </div>
           <div className="list">
@@ -45,9 +50,11 @@ function Footer() {
               <li>Waah Jobs</li>
             </ul>
           </div>
+          </div>
       </div>
-      <div className="content container-fluid pt-3 col-xlg-2 col-lg-3 col-md-3 col-sm-6 col-xsm-12">
-          <div className="heading">
+      <div className="content container-fluid  mt-2 mb-2 pt-3 col-xlg-2 col-lg-3 col-md-3 col-sm-6 col-xsm-12">
+          <div className='box pt-3 shadow w-100'>
+          <div className="heading d-flex align-items-center justify-content-center">
             <p>OLX</p>
           </div>
           <div className="list">
@@ -58,9 +65,11 @@ function Footer() {
               <li>Blog</li>
             </ul>
           </div>
+          </div>
       </div>
-      <div className="content container-fluid pt-3 col-xlg-2 col-lg-3 col-md-3 col-sm-6 col-xsm-12">
-          <div className="heading">
+      <div className="content container-fluid  mt-2 mb-2 pt-3 col-xlg-2 col-lg-3 col-md-3 col-sm-6 col-xsm-12">
+          <div className='box pt-3 shadow w-100'>
+          <div className="heading d-flex align-items-center justify-content-center">
             <p>FOLLOW US</p>
           </div>
           <div className="list">
@@ -74,6 +83,7 @@ function Footer() {
                 <li><img src={playStore} alt="playstore icon" /></li>
                 <li><img src={appStore} alt="appstore icon"/></li>
             </ul>
+          </div>
           </div>
       </div>
     </div>

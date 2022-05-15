@@ -34,7 +34,12 @@ ul li img:hover{
     font-size: 22px;
     font-weight: bolder;
 }
-  
+.content .box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .footer {
     display: flex;
     justify-content: space-between;
