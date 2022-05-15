@@ -1,34 +1,53 @@
 import React from "react";
 import "./Header.css";
-import Logo from '../../assets/OlxLogo'
 import SellButton from '../../assets/SellButton'
 import SellButtonPlus from '../../assets/SellButtonPlus'
 import OlxLogo from "../../assets/OlxLogo";
+import Search from '../../assets/Search'
+import Arrow from '../../assets/Arrow'
 
 function Header() {
   return (
-    <nav class="navbar navbar-expand-lg bg-light">
-  <div class="container-fluid w-100">
-    <span class="navbar-brand" href="#"><OlxLogo/></span>
-    <div className="location-search">
-    <input type="text" placeholder="India" />
-    <i class="fa-solid fa-magnifying-glass search"></i>
-    <i class="fa-solid fa-angle-down arrow"></i>
-    </div>
-    <div className="items-search">
-      <input type="text" />
-    <i class="fa-solid fa-magnifying-glass search-items"></i>
+    <div className="container-fluid navbar-parent shadow">
+      <div className="navbar-child d-flex align-items-center">
+        <div className="logo mr-3">
+          <OlxLogo></OlxLogo>
+        </div>
+        <div className="placeSearch mr-4 d-flex align-items-center">
+          <Search></Search>
+          <input type="text" placeholder="Inida" className="pl-1"/>
+          <Arrow></Arrow>
+        </div>
+        <div className="productSearch d-flex align-items-center justify-content-space-between bg-white">
+          <div className="input">
+            <input
+              type="text"
+              placeholder="Find car,mobile phone and more..."
+            />
+          </div>
+          <div className="searchAction d-flex">
+            <Search color="#ffffff"></Search>
+          </div>
+        </div>
+        <div className="language">
+          <span> ENGLISH </span>
+          <Arrow></Arrow>
+        </div>
+        <div className="loginPage ml-3 mr-3">
+          <span>Login</span>
+          <hr />
+        </div>
 
+        <div className="sellMenu">
+          <SellButton></SellButton>
+          <div className="sellMenuContent">
+            <SellButtonPlus></SellButtonPlus>
+            <span>SELL</span>
+          </div>
+        </div>
+        <i class="fa-solid fa-bars menu"></i>
+      </div>
     </div>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
   );
 }
 
