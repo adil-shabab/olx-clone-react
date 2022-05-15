@@ -1,40 +1,57 @@
 .banner-container {
     padding-top: 4em;
-    margin-left: 150px;
+    padding-left: 100px;
+    max-width: 100%;
+    overflow-x: scroll;
   }
-  .banner-container .bannerChildDiv .menuBar {
+  .banner-container::-webkit-scrollbar{
+      display: none;
+  }
+  .menuBar{
+      width: 100%;
+  }
+  .banner-container .banner-child .menuBar {
     display: flex;
-    padding: 10px 16px 10px 16px;
+    padding: 10px 16px;
+  }
+  .arrow{
+      font-size: 20px;
+      font-weight: bold;
   }
   
-  .banner-container .bannerChildDiv .menuBar span {
-  }
-  
-  .banner-container .bannerChildDiv .menuBar .categoryMenu span {
+  .banner-container .banner-child .menuBar .categoryMenu span {
     margin-right: 16px;
     font-weight: bolder;
   }
-  
-  .banner-container .bannerChildDiv .menuBar .otherQuickOptions {
-  }
-  .banner-container .bannerChildDiv .menuBar .otherQuickOptions span {
+
+  .banner-container .banner-child .menuBar .options span {
     padding: 10px;
+    cursor: pointer;
+  }
+  .banner-container .banner-child .menuBar .options span:hover {
+      color: rgb(249, 118, 118);
   }
   
-  .bannerChildDiv .banner {
+  .banner-child .banner {
     position: relative;
     width: 100vw;
   }
-  .bannerChildDiv .banner img{
+  .banner-child .banner img{
     width: 100vw;
   }
   
-  @media only screen and (max-width: 700px) {
-    .otherQuickOptions {
+  
+  @media only screen and (max-width: 997px) {
+    .options {
       display: none;
     }
     .bannerChildDiv .banner {
       position: relative;
+    }
+  }
+  @media only screen and (max-width: 700px) {
+    .banner-container{
+        padding-left: 10px;
     }
   }
   
