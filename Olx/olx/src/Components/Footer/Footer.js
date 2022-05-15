@@ -63,10 +63,10 @@ function Footer() {
           </div>
           <div className="list">
             <ul className='d-flex'>
-              <li><i class="fa-brands fa-facebook"></i></li>
-              <li><i class="fa-brands fa-instagram"></i></li>
-              <li><i class="fa-brands fa-twitter"></i></li>
-              <li><i class="fa-solid fa-play"></i></li>
+              <li className='mr-2'><i class="fa-brands fa-facebook"></i></li>
+              <li className='mr-2'><i class="fa-brands fa-instagram"></i></li>
+              <li className='mr-2'><i class="fa-brands fa-twitter"></i></li>
+              <li className='mr-2'><i class="fa-solid fa-play"></i></li>
             </ul>
           </div>
       </div>
