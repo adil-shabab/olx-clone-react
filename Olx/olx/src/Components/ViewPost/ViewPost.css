@@ -40,11 +40,19 @@
   border-radius: 6px;
 }
 
-.viewParentDiv .rightSection .contactDetails :first-child {
+.view-container .rightSection .contactDetails :first-child {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
   color: #002f34;
   font-weight: 400;
   padding: 0;
+}
+
+
+@media (max-width: 600px) {
+    .view-container .rightSection .productDetails :first-child {
+        font-weight: 500;
+        font-size: 28px;
+    }
 }
