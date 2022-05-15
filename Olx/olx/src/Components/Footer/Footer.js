@@ -1,11 +1,13 @@
 import React from 'react'
 import './Footer.css'
+import playStore from '../../Images/play.jpg'
+import appStore from '../../Images/app.jpg'
 
 function Footer() {
   return (
     <div>
-        <div className="footerParentDiv row">
-      <div className="content container-fluid pt-3 col-lg-2 col-md-3 col-sm-6">
+        <div className="footerParentDiv row m-0">
+      <div className="content container-fluid pt-3 col-xlg-2 col-lg-3 col-md-3 col-sm-6 col-xsm-12">
           <div className="heading">
             <p>POPULAR LOCATIONS</p>
           </div>
@@ -18,7 +20,7 @@ function Footer() {
             </ul>
           </div>
       </div>
-      <div className="content container-fluid pt-3 col-lg-2 col-md-3 col-sm-6">
+      <div className="content container-fluid pt-3 col-xlg-2 col-lg-3 col-md-3 col-sm-6 col-xsm-12">
           <div className="heading">
             <p>TRENDING LOCATIONS</p>
           </div>
@@ -31,7 +33,7 @@ function Footer() {
             </ul>
           </div>
       </div>
-      <div className="content container-fluid pt-3 col-lg-2 col-md-3 col-sm-6">
+      <div className="content container-fluid pt-3 col-xlg-2 col-lg-3 col-md-3 col-sm-6 col-xsm-12">
           <div className="heading">
             <p>ABOUT US</p>
           </div>
@@ -44,7 +46,7 @@ function Footer() {
             </ul>
           </div>
       </div>
-      <div className="content container-fluid pt-3 col-lg-2 col-md-3 col-sm-6">
+      <div className="content container-fluid pt-3 col-xlg-2 col-lg-3 col-md-3 col-sm-6 col-xsm-12">
           <div className="heading">
             <p>OLX</p>
           </div>
@@ -57,7 +59,7 @@ function Footer() {
             </ul>
           </div>
       </div>
-      <div className="content container-fluid pt-3 col-lg-2 col-md-3 col-sm-6">
+      <div className="content container-fluid pt-3 col-xlg-2 col-lg-3 col-md-3 col-sm-6 col-xsm-12">
           <div className="heading">
             <p>FOLLOW US</p>
           </div>
@@ -67,6 +69,10 @@ function Footer() {
               <li className='mr-2'><i class="fa-brands fa-instagram"></i></li>
               <li className='mr-2'><i class="fa-brands fa-twitter"></i></li>
               <li className='mr-2'><i class="fa-solid fa-play"></i></li>
+            </ul>
+            <ul className='d-flex'>
+                <li><img src={playStore} alt="playstore icon" /></li>
+                <li><img src={appStore} alt="appstore icon"/></li>
             </ul>
           </div>
       </div>

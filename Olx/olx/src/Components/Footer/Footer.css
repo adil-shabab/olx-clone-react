@@ -17,16 +17,23 @@ li{
 .list ul li i:hover{
     border: 0.4px solid black;
 }
-  /* .footerParentDiv .content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px;
-  } */
-  .footerParentDiv .content .heading {
+ul li img{
+    width: 120px;
+    border: 1px solid black;
+    margin-right: 2px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+ul li img:hover{
+    border: 1px solid rgb(49, 43, 223);
+}
+.footerParentDiv{
+    background: whitesmoke;
+}
+.footerParentDiv .content .heading {
     font-size: 22px;
     font-weight: bolder;
-  }
+}
   
 .footer {
     display: flex;
