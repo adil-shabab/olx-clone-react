@@ -9,7 +9,7 @@ import View from './Pages/View';
 function App() {
   return (
     <div  className="App">
-      <View/>
+      <Home/>
     </div>
   );
 }

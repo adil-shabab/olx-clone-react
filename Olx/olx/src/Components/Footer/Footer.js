@@ -72,8 +72,8 @@ function Footer() {
           <div className="heading d-flex align-items-center justify-content-center">
             <p>FOLLOW US</p>
           </div>
-          <div className="list">
-            <ul className='d-flex'>
+          <div>
+            <ul className='d-flex justify-content-center'>
               <li className='mr-2'><i class="fa-brands fa-facebook"></i></li>
               <li className='mr-2'><i class="fa-brands fa-instagram"></i></li>
               <li className='mr-2'><i class="fa-brands fa-twitter"></i></li>
