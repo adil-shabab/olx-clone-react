@@ -21,22 +21,18 @@
     color: #002f34;
   }
   
-  .recommendations .cards {
+  /* .recommendations .cards {
     display: flex;
-  }
+  } */
   
-  .moreView .cards {
+  /* .moreView .cards {
     white-space: nowrap;
     overflow-x: scroll;
     overflow-y: hidden;
   }
-  
+   */
   .card {
-    margin-right: 15px;
     padding: 13px;
-    max-width: 222px;
-    width: 222px;
-    height: 270px;
     display: inline-block;
     cursor: pointer;
   }
