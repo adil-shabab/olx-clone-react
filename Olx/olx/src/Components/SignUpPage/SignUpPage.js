@@ -2,7 +2,7 @@ import React,{useState, useContext} from 'react'
 import './SignUpPage.css'
 import Logo from '../../Images/olx-logo.png'
 import {FirebaseContext} from '../../store/FirebaseContext';
-import { useNavigate } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom'
 
 
 function SignUpPage() {
@@ -32,10 +32,10 @@ function SignUpPage() {
             username: username,
             phone: phone
            }).then(()=>{
-              navigate('/logggggggin')
+              navigate('/login')
            })
          })
-      });
+    });
   }
 
   return (
