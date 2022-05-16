@@ -1,47 +1,64 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './SignUpPage.css'
 import Logo from '../../Images/olx-logo.png'
 
 function SignUpPage() {
+  const [username, setUsername] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit=(e)=>{
+    e.preventDefault()
+    console.log(username)
+  }
+
   return (
     <div>
       <div className="signup-container">
         <img width="200px" height="200px" src={Logo}></img>
-        <form>
+        <form onSubmit={handleSubmit}>
           <label htmlFor="fname">Username</label>
           <br />
           <input
             className="input"
             type="text"
             id="fname"
+            value={username}
+            onChange={(e)=>setUsername(e.target.value)}
             name="name"
-            defaultValue="John"
           />
           <br />
-          <label htmlFor="fname">Email</label>
+          <label htmlFor="email">Email</label>
           <br />
           <input
             className="input"
+            value={email}
+            onChange={(e)=>setEmail(e.target.value)}
             type="email"
-            id="fname"
+            id="email"
             name="email"
           />
           <br />
-          <label htmlFor="lname">Phone</label>
+          <label htmlFor="phone">Phone</label>
           <br />
           <input
             className="input"
             type="number"
-            id="lname"
+            value={phone}
+            onChange={(e)=>setPhone(e.target.value)}
+            id="phone"
             name="phone"
           />
           <br />
-          <label htmlFor="lname">Password</label>
+          <label htmlFor="password">Password</label>
           <br />
           <input
             className="input"
             type="password"
-            id="lname"
+            value={password}
+            onChange={(e)=>setPassword(e.target.value)}
+            id="password"
             name="password"
           />
           <br />
