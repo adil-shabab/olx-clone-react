@@ -1,16 +1,18 @@
 import React,{useContext, useState} from 'react'
 import {FirebaseContext} from '../../store/FirebaseContext'
 import './Login.css'
+import {useNavigate} from 'react-router-dom'
 import Logo from '../../Images/olx-logo.png'
 
 function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const {firebase} = useContext(FirebaseContext)
+  const navigate = useNavigate()
   const handleLogin = (e)=>{
     e.preventDefault()
     firebase.auth().signInWithEmailAndPassword(email,password).then(()=>{
-      alert("login")
+      navigate('/')
     }).catch((error)=>{
       alert(error.message)
     })
