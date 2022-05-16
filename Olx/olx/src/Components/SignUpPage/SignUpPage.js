@@ -21,6 +21,7 @@ function SignUpPage() {
           <label htmlFor="fname">Username</label>
           <br />
           <input
+            required
             className="input"
             type="text"
             id="fname"
@@ -32,6 +33,7 @@ function SignUpPage() {
           <label htmlFor="email">Email</label>
           <br />
           <input
+            required
             className="input"
             value={email}
             onChange={(e)=>setEmail(e.target.value)}
@@ -43,6 +45,7 @@ function SignUpPage() {
           <label htmlFor="phone">Phone</label>
           <br />
           <input
+            required
             className="input"
             type="number"
             value={phone}
@@ -54,6 +57,7 @@ function SignUpPage() {
           <label htmlFor="password">Password</label>
           <br />
           <input
+            required
             className="input"
             type="password"
             value={password}

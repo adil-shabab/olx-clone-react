@@ -67,7 +67,7 @@ function Footer() {
           </div>
           </div>
       </div>
-      <div className="content container-fluid  mt-2 mb-2 pt-3 col-xlg-2 col-lg-3 col-md-3 col-sm-6 col-xsm-12">
+      <div className="content container-fluid  mt-2 mb-2 pt-3 col-xlg-2 col-lg-5 col-md-5 col-sm-6 col-xsm-12">
           <div className='box pt-3 shadow w-100'>
           <div className="heading d-flex align-items-center justify-content-center">
             <p>FOLLOW US</p>
