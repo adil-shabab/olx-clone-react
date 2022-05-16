@@ -13,8 +13,11 @@ function SignUpPage() {
 
   const handleSubmit=(e)=>{
     e.preventDefault()
-    console.log(username)
-    console.log(firebase)
+    // console.log(username)
+    // console.log(firebase)
+    firebase.auth().createUserWithEmailAndPassword(email,password).then((result)=>{
+      result.user.updateProfile({displayName: username})
+    })
   }
 
   return (
