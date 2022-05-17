@@ -2,6 +2,7 @@ import React, { useState,useContext } from "react";
 import "./CreatePage.css";
 import {FirebaseContext,AuthContext} from '../../store/Context'
 
+
 function CreatePage() {
   const [name, setName] = useState("");
   const [category, setCategory] = useState("");
@@ -15,7 +16,6 @@ function CreatePage() {
 
   const formSubmit = (e)=>{
     e.preventDefault();
-    console.log(name, image);
     firebase.storage().ref(`/image/${image.name}`).put(image).then(({ref})=>{
       ref.getDownloadURL().then((url)=>{
         console.log(url)
