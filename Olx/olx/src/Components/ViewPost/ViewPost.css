@@ -1,14 +1,18 @@
+
 .view-container {
   padding-top: 4em;
   display: flex;
 }
 .view-container .imageShowDiv {
   padding: 16px;
-  width: 70vw;
+  width: 60vw;
+  max-height: 60vh;
 }
 .view-container .imageShowDiv img {
   width: 100%;
   height: 100%;
+  /* border: 1px solid black; */
+  object-fit: contain;
 }
 
 .view-container .rightSection {
