@@ -1,4 +1,4 @@
-import React,{useContext} from "react";
+import React,{useState, useContext} from "react";
 import "./Header.css";
 import SellButton from '../../assets/SellButton'
 import SellButtonPlus from '../../assets/SellButtonPlus'
@@ -9,6 +9,7 @@ import { AuthContext } from "../../store/Context";
 
 
 function Header() {
+  const [logout, setLogout] = useState(false)
   const {user} = useContext(AuthContext)
   return (
     <div className="container-fluid navbar-parent shadow">
@@ -34,7 +35,14 @@ function Header() {
         </div>
         <div className="language">
           <span> ENGLISH </span>
+          <div onClick={()=>{
+            setLogout(true)
+          }}>
           <Arrow></Arrow>
+          </div>
+          <div className={`logout`}>
+            <button className="btn">Logout</button>
+          </div>
         </div>
         <div className="loginPage ml-4 mr-3 d-flex flex-column">
           <span className="welcome">{user && "welcome"}</span>

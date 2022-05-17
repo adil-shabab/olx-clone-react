@@ -77,6 +77,7 @@
   height: 48px;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .language span {
@@ -147,6 +148,22 @@
 }
 .menu {
   display: none;
+}
+.logout{
+  position: absolute;
+  top: 65px;
+  z-index: 11111;
+  border: 2px solid black;
+  background: rgb(0, 0, 0);
+  padding: 4px 10px;
+  border-radius: 10px;
+}
+.logout .btn {
+  color: white;
+}
+.logout:hover{
+  background: #555;
+
 }
 
 
