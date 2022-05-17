@@ -6,13 +6,15 @@ function CreatePage() {
   const [name, setName] = useState("");
   const [category, setCategory] = useState("");
   const [price, setPrice] = useState();
-
+  const [image, setImage] = useState([]);
+  const [state, setState] = useState(false);
 
   return (
     <card>
         <div className="create-container">
           <form onSubmit={(e)=>{
             e.preventDefault()
+            console.log(name,image)
           }}>
             <label htmlFor="fname">Name</label>
             <br />
@@ -50,10 +52,14 @@ function CreatePage() {
             <br />
           
           <br />
-          <img alt="Posts" width="200px" height="200px" src='' className='mb-2'></img>
+          <img alt="Posts" width="200px" height="200px" src={`${state ? URL.createObjectURL(image) : ''}`} className='mb-2'></img>
           
             <br />
             <input
+            onChange={(e)=>{
+              setImage(e.target.files[0])
+              setState(true)
+            }}
             type="file" />
             <br />
             <button type='submit' className="uploadBtn">upload and Submit</button>
