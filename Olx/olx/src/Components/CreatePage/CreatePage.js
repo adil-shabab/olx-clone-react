@@ -1,6 +1,7 @@
 import React, { useState,useContext } from "react";
 import "./CreatePage.css";
 import {FirebaseContext,AuthContext} from '../../store/Context'
+import {useNavigate} from 'react-router-dom'
 
 
 function CreatePage() {
@@ -9,6 +10,8 @@ function CreatePage() {
   const [price, setPrice] = useState();
   const [image, setImage] = useState([]);
   const [state, setState] = useState(false);
+  const date = new Date()
+  const navigate = useNavigate()
 
 
   const {firebase} = useContext(FirebaseContext)
@@ -19,6 +22,16 @@ function CreatePage() {
     firebase.storage().ref(`/image/${image.name}`).put(image).then(({ref})=>{
       ref.getDownloadURL().then((url)=>{
         console.log(url)
+        firebase.firestore().collection('Products').add({
+          name, 
+          category, 
+          price, 
+          url, 
+          userId: user.uid, 
+          createdAt: date.toDateString()
+        }).then(()=>{
+          navigate('/')
+        })
       })
     })
   }
