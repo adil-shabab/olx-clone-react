@@ -6,13 +6,17 @@ import SignUp from "./Pages/SignUp";
 import Create from "./Pages/Create";
 import View from "./Pages/View";
 import React,{useEffect,useContext} from 'react'
-import { AuthContext } from "./store/Context";
+import { AuthContext, FirebaseContext } from "./store/Context";
 
 function App() {
-  const {user} = useContext(AuthContext)
+  const {firebase } = useContext(FirebaseContext)
+  const {user, setUser} = useContext(AuthContext)
   useEffect(() => {
     console.log(user)
     console.log("completed")
+    firebase.auth().onAuthStateChanged((user)=>{
+      setUser(user)
+    })
   });
   return (
     <div className="App">

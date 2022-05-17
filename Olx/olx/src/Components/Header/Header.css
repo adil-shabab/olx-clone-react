@@ -69,7 +69,9 @@
   transform: translate(-50%, -50%);
   fill: white;
 }
-
+.welcome{
+  font-size: 11px;
+}
 .language {
   margin-left: 40px;
   height: 48px;
@@ -85,13 +87,20 @@
   margin-right: 5px;
 }
 
-.span {
+.login-user {
   text-decoration: none;
   font-size: 16px;
   white-space: normal;
   text-overflow: ellipsis;
-  font-weight: bolder;
+  font-weight: bold;
   margin-right: 5px;
+  font-size: 14px;
+}
+.loginPage:hover .login-user{
+  color: rgb(89, 17, 17);
+}
+.loginPage:hover .welcome{
+  color: rgb(163, 16, 16);
 }
 
 .loginPage hr {
@@ -100,9 +109,6 @@
   height: 2px;
 }
 
-.loginPage a {
-  text-decoration: none;
-}
 
 .sellMenu {
   position: relative;
