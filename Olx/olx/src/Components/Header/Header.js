@@ -1,16 +1,19 @@
 import React,{useState, useContext} from "react";
+import {useNavigate} from 'react-router-dom'
 import "./Header.css";
 import SellButton from '../../assets/SellButton'
 import SellButtonPlus from '../../assets/SellButtonPlus'
 import OlxLogo from "../../assets/OlxLogo";
 import Search from '../../assets/Search'
 import Arrow from '../../assets/Arrow'
-import { AuthContext } from "../../store/Context";
+import { AuthContext, FirebaseContext } from "../../store/Context";
 
 
 function Header() {
   const [logout, setLogout] = useState(false)
   const {user} = useContext(AuthContext)
+  const {firebase} = useContext(FirebaseContext)
+  const navigate = useNavigate()
   return (
     <div className="container-fluid navbar-parent shadow">
       <div className="navbar-child d-flex align-items-center">
@@ -36,13 +39,22 @@ function Header() {
         <div className="language">
           <span> ENGLISH </span>
           <div onClick={()=>{
-            setLogout(true)
+            setLogout((prevState)=>{
+              if(prevState==true){
+                return false
+              }else{
+                return true
+              }
+            })
           }}>
           <Arrow></Arrow>
           </div>
-          <div className={`logout`}>
-            <button className="btn">Logout</button>
-          </div>
+          {logout && <div className="logout">
+            <button onClick={()=>{
+              firebase.auth().signOut().then(navigate('/login'))
+
+            }} className="btn">Logout</button>
+          </div>}
         </div>
         <div className="loginPage ml-4 mr-3 d-flex flex-column">
           <span className="welcome">{user && "welcome"}</span>
