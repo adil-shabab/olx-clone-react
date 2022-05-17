@@ -9,6 +9,10 @@ const {firebase} = useContext(FirebaseContext)
 const [products, setProducts] = useState([]);
 
 useEffect(()=>{
+
+
+
+  
   firebase.firestore().collection('Products').get().then((snapshot)=>{
     const allPost = snapshot.docs.map((product)=>{
       return{
@@ -17,8 +21,9 @@ useEffect(()=>{
       }
     })
     console.log(allPost)
+    setProducts(allPost)
   })
-  })
+  },[])
 
 
   return (
@@ -28,25 +33,29 @@ useEffect(()=>{
           <span>Quick Menu</span>
           <span>View more</span>
         </div>
-        <div className="cards">
-          <div className="card col-lg-3 col-md-4 col-sm-6 col-xsm-12">
+        <div className="cards" onClick={}>
+         {products.map((product)=>{
+           return(
+            <div className="card col-lg-3 col-md-4 col-sm-6 col-xsm-12">
             <div className="p-3 bg-white shadow w-100 card-child">
               <div className="favorite">
                 <Heart></Heart>
               </div>
               <div className="image">
-                <img src={require('../../Images/R15V3.jpg')} alt="" />
+                <img src={product.url} alt="" />
               </div>
               <div className="content">
-                <p className="rate">&#x20B9; 250000</p>
-                <span className="kilometer">Two Wheeler</span>
-                <p className="name"> YAMAHA R15V3</p>
+                <p className="rate">&#x20B9; {product.price}</p>
+                <span className="kilometer">{product.category}</span>
+                <p className="name"> {product.name}</p>
               </div>
               <div className="date">
-                <span>Tue May 04 2021</span>
+                <span>{product.createdAt}</span>
               </div>
             </div>
           </div>
+           )
+         }) }
         </div>
       </div>
     </div>

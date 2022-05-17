@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect,useContext} from 'react'
 import './ViewPost.css'
 import bike from '../../Images/R15V3.jpg'
 
