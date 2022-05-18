@@ -208,7 +208,7 @@
     right: 230px;
   }
 }
-@media only screen and (max-width: 497px) {
+@media only screen and (max-width: 540px) {
   .language {
     display: none !important;
   }

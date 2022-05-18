@@ -1,5 +1,5 @@
 import React,{useState, useContext} from "react";
-import {useNavigate} from 'react-router-dom'
+import {useNavigate, Link} from 'react-router-dom'
 import "./Header.css";
 import SellButton from '../../assets/SellButton'
 import SellButtonPlus from '../../assets/SellButtonPlus'
@@ -17,9 +17,11 @@ function Header() {
   return (
     <div className="container-fluid navbar-parent shadow">
       <div className="navbar-child d-flex align-items-center">
+        <Link to='/'>
         <div className="logo mr-3">
           <OlxLogo></OlxLogo>
         </div>
+        </Link>
         <div className="placeSearch mr-4 d-flex align-items-center">
           <Search></Search>
           <input type="text" placeholder="Inida" className="pl-1"/>
@@ -56,7 +58,9 @@ function Header() {
             }} className="btn">Logout</button>
           </div>}
         </div>
-        <div className="loginPage ml-4 mr-3 d-flex flex-column">
+        <div onClick={()=>{
+          {user ? console.log("already logged") : navigate('login')}
+        }} className="loginPage ml-4 mr-3 d-flex flex-column">
           <span className="welcome">{user && "welcome"}</span>
           <span className="login-user">{user ?  user.displayName : "Login"}</span>
           <hr />
@@ -64,11 +68,14 @@ function Header() {
 
         <div className="sellMenu mr-4">
           <SellButton></SellButton>
+        <Link to='/create/post'>
           <div className="sellMenuContent">
             <SellButtonPlus></SellButtonPlus>
             <span>SELL</span>
           </div>
+          </Link>
         </div>
+        
         <i class="fa-solid fa-bars menu"></i>
       </div>
     </div>

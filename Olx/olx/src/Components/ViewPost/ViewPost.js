@@ -22,7 +22,7 @@ function ViewPost() {
 
   return (
     <div className="view-container container-fluid row">
-      <div className="imageShowDiv col-xlg-8 col-lg-8 col-md-12 col-sm-12 col-12">
+      <div className="mt-5 imageShowDiv col-xlg-8 col-lg-8 col-md-12 col-sm-12 col-12">
         <img
           src={postDetails.url}
           alt=""
