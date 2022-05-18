@@ -1,7 +1,7 @@
 import React,{useContext, useState} from 'react'
 import {FirebaseContext} from '../../store/Context'
 import './Login.css'
-import {useNavigate} from 'react-router-dom'
+import {useNavigate, Link} from 'react-router-dom'
 import Logo from '../../Images/olx-logo.png'
 
 function LoginPage() {
@@ -50,7 +50,7 @@ function LoginPage() {
           <br />
           <button>Login</button>
         </form>
-        <a>Signup</a>
+        <Link to='/signup' style={{'textDecoration': 'none', "color": 'black'}}>Signup</Link>
       </div>
     </div>
   )

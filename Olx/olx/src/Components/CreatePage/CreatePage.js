@@ -1,8 +1,7 @@
-import React, { useState,useContext } from "react";
+import React, { useState, useContext } from "react";
 import "./CreatePage.css";
-import {FirebaseContext,AuthContext} from '../../store/Context'
-import {useNavigate} from 'react-router-dom'
-
+import { FirebaseContext, AuthContext } from "../../store/Context";
+import { useNavigate } from "react-router-dom";
 
 function CreatePage() {
   const [name, setName] = useState("");
@@ -10,35 +9,58 @@ function CreatePage() {
   const [price, setPrice] = useState();
   const [image, setImage] = useState([]);
   const [state, setState] = useState(false);
-  const date = new Date()
-  const navigate = useNavigate()
+  const [loader, setLoader] = useState(false);
+  const date = new Date();
+  const navigate = useNavigate();
 
+  const { firebase } = useContext(FirebaseContext);
+  const { user } = useContext(AuthContext);
 
-  const {firebase} = useContext(FirebaseContext)
-  const {user} = useContext(AuthContext)
-
-  const formSubmit = (e)=>{
+  const formSubmit = (e) => {
     e.preventDefault();
-    firebase.storage().ref(`/image/${image.name}`).put(image).then(({ref})=>{
-      ref.getDownloadURL().then((url)=>{
-        console.log(url)
-        firebase.firestore().collection('Products').add({
-          name, 
-          category, 
-          price, 
-          url, 
-          userId: user.uid, 
-          createdAt: date.toDateString()
-        }).then(()=>{
-          navigate('/')
-        })
-      })
-    })
-  }
+    setLoader(true);
+    firebase
+      .storage()
+      .ref(`/image/${image.name}`)
+      .put(image)
+      .then(({ ref }) => {
+        ref.getDownloadURL().then((url) => {
+          console.log(url);
+          firebase
+            .firestore()
+            .collection("Products")
+            .add({
+              name,
+              category,
+              price,
+              url,
+              userId: user.uid,
+              createdAt: date.toDateString(),
+            })
+            .then(() => {
+              navigate("/");
+              setLoader(false);
+            });
+        });
+      });
+  };
 
   return (
     <card>
-      <div className="create-container">
+      <main>
+        <div class="preloader">
+          <div class="preloader__square"></div>
+          <div class="preloader__square"></div>
+          <div class="preloader__square"></div>
+          <div class="preloader__square"></div>
+        </div>
+        <div class="status">
+          Loading<span class="status__dot">.</span>
+          <span class="status__dot">.</span>
+          <span class="status__dot">.</span>
+        </div>
+      </main>
+      {/* <div className="create-container">
         <form
           onSubmit={formSubmit}
         >
@@ -105,7 +127,7 @@ function CreatePage() {
             upload and Submit
           </button>
         </form>
-      </div>
+      </div> */}
     </card>
   );
 }
