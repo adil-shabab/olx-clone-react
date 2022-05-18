@@ -6,11 +6,12 @@ import SignUp from "./Pages/SignUp";
 import Create from "./Pages/Create";
 import View from "./Pages/View";
 import Post from "./store/PostContext";
-import React,{useEffect,useContext} from 'react'
+import React,{useEffect,useContext,useState} from 'react'
 import { AuthContext, FirebaseContext } from "./store/Context";
-import Loader from "./Components/Loader/Loader";
+
 
 function App() {
+  const [loader, setLoader] = useState(false);
   const {firebase } = useContext(FirebaseContext)
   const {user, setUser} = useContext(AuthContext)
   useEffect(() => {
