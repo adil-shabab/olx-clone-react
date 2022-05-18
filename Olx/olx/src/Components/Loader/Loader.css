@@ -44,6 +44,11 @@
       height: 100vh;
     }
   }
+  @media (max-width:500px) {
+    .status{
+      top: 75px !important;
+    }
+  }
 
   .preloader__square {
     animation: smallPopOut1 var(--dur1) linear, popInOut var(--dur2) var(--dur1) linear infinite;
