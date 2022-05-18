@@ -13,6 +13,7 @@ function Header() {
   const { user } = useContext(AuthContext);
   const { firebase } = useContext(FirebaseContext);
   const navigate = useNavigate();
+  const [active, setActive] = useState('')
   return (
     <div className="container-fluid navbar-parent shadow">
       <div className="navbar-child d-flex align-items-center">
@@ -96,9 +97,12 @@ function Header() {
           </Link>
         </div>
 
-        <i class="fa-solid fa-bars menu"></i>
+        <i
+        onClick={()=>{
+          setActive('active')
+        }} class="fa-solid fa-bars menu"></i>
       </div>
-      <div className="shadow bg-white menu-opt">
+      <div className={`shadow bg-white menu-opt ${active}`}>
         <i
           onClick={() => {
             firebase.auth().signOut().then(navigate("/login"));

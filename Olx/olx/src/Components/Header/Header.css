@@ -167,16 +167,28 @@
 }
 
 .menu-opt{
-  width: 20%;
   right: 25px;
+  margin-top: 20px;
+  display: none;
+  position: absolute;
+}
+.menu-opt.active{
+  display: block;
+  width: 50%;
+  padding-bottom: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
-  position: absolute;
 }
-/
+.menu-opt i{
+  border-bottom: 1px solid black !important;
+  padding: 15px;
+}
+.menu-opt i:hover{
+  color: #002f34;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+}
 
 
 
