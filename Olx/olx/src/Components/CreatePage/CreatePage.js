@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import "./CreatePage.css";
 import { FirebaseContext, AuthContext } from "../../store/Context";
 import { useNavigate } from "react-router-dom";
+import Loader from "../Loader/Loader";
 
 function CreatePage() {
   const [name, setName] = useState("");
@@ -47,20 +48,7 @@ function CreatePage() {
 
   return (
     <card>
-      <main>
-        <div class="preloader">
-          <div class="preloader__square"></div>
-          <div class="preloader__square"></div>
-          <div class="preloader__square"></div>
-          <div class="preloader__square"></div>
-        </div>
-        <div class="status">
-          Loading<span class="status__dot">.</span>
-          <span class="status__dot">.</span>
-          <span class="status__dot">.</span>
-        </div>
-      </main>
-      {/* <div className="create-container">
+      {loader ? <Loader/> :<div className="create-container">
         <form
           onSubmit={formSubmit}
         >
@@ -127,8 +115,8 @@ function CreatePage() {
             upload and Submit
           </button>
         </form>
-      </div> */}
-    </card>
+      </div>}
+      </card>
   );
 }
 

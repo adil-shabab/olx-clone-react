@@ -8,6 +8,7 @@ import View from "./Pages/View";
 import Post from "./store/PostContext";
 import React,{useEffect,useContext} from 'react'
 import { AuthContext, FirebaseContext } from "./store/Context";
+import Loader from "./Components/Loader/Loader";
 
 function App() {
   const {firebase } = useContext(FirebaseContext)
