@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import Loader from "../Loader/Loader";
 
 function CreatePage() {
+  const [block, setBlock] = useState(initialState);
   const [name, setName] = useState("");
   const [category, setCategory] = useState("");
   const [price, setPrice] = useState();
@@ -19,6 +20,7 @@ function CreatePage() {
 
   const formSubmit = (e) => {
     e.preventDefault();
+    if (user){
     setLoader(true);
     firebase
       .storage()
@@ -43,7 +45,10 @@ function CreatePage() {
               setLoader(false);
             });
         });
-      });
+      })}
+      else{
+
+      };
   };
 
   return (
