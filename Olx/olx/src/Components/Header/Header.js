@@ -9,7 +9,7 @@ import Arrow from "../../assets/Arrow";
 import { AuthContext, FirebaseContext } from "../../store/Context";
 
 function Header() {
-  const [language, setLanguage] = useState(true);
+  const [icon, setIcon] = useState('fa-solid fa-bars')
   const [logout, setLogout] = useState(false);
   const { user } = useContext(AuthContext);
   const { firebase } = useContext(FirebaseContext);
@@ -97,6 +97,13 @@ function Header() {
 
         <i
         onClick={()=>{
+          setIcon((prevState)=>{
+            if(prevState == 'fa-solid fa-xmark'){
+              return 'fa-solid fa-bars'
+            }else{
+              return 'fa-solid fa-xmark'
+            }
+          })
           setActive((prevState)=>{
             if(prevState == ''){
               return 'active'
@@ -104,7 +111,7 @@ function Header() {
               return ''
             }
           })
-        }} class="fa-solid fa-bars menu"></i>
+        }} class={`${icon} menu`}></i>
       </div>
       <div className={`shadow bg-white menu-opt ${active}`}>
         <i
