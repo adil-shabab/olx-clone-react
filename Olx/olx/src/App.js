@@ -11,7 +11,6 @@ import { AuthContext, FirebaseContext } from "./store/Context";
 
 
 function App() {
-  const [loader, setLoader] = useState(false);
   const {firebase } = useContext(FirebaseContext)
   const {user, setUser} = useContext(AuthContext)
   useEffect(() => {
