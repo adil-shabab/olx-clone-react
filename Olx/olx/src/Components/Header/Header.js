@@ -40,11 +40,8 @@ function Header() {
         </div>
         <div className="language">
           <span
-            className="mr-3"
-            style={{ cursor: "pointer", transition: "0.5s ease" }}
-          >
-            {" "}
-            ENGLISH{" "}
+            className="mr-3">
+            ENGLISH
           </span>
           <div
             onClick={() => {
@@ -57,7 +54,7 @@ function Header() {
               });
             }}
           >
-            <i class="fa-solid fa-power-off"></i>
+            <i  style={{ cursor: "pointer", transition: "0.5s ease" }} class="fa-solid fa-power-off"></i>
           </div>
           {logout && (
             <div className="logout">
