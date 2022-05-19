@@ -73,7 +73,7 @@ function Header() {
         <div
           onClick={() => {
             {
-              user ? console.log("already logged") : navigate("login");
+              user ? console.log("already logged") : navigate("/login");
             }
           }}
           className="loginPage ml-4 mr-3 d-flex flex-column"

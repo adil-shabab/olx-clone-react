@@ -1,6 +1,5 @@
 import React,{useEffect,useState,useContext} from 'react'
 import './ViewPost.css'
-import bike from '../../Images/R15V3.jpg'
 import { PostContext } from '../../store/PostContext';
 import { FirebaseContext } from '../../store/Context';
 
