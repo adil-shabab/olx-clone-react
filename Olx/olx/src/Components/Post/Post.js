@@ -1,7 +1,5 @@
 import React,{useEffect,useState,useContext} from "react";
 import "./Post.css";
-import Heart from "../../assets/Heart";
-import bike from "../../Images/R15V3.jpg";
 import { FirebaseContext } from "../../store/Context";
 import { PostContext } from "../../store/PostContext";
 import {useNavigate} from 'react-router-dom'
@@ -41,19 +39,22 @@ useEffect(()=>{
         <div className="cards" >
          {products.map((product)=>{
            return(
-            <div onClick={()=>{
-              setPostDetails(product)
-              navigate('/view/post')
-            }}
+            <div
              className="card col-lg-3 col-md-4 col-sm-6 col-xsm-12">
             <div className="p-3 bg-white shadow w-100 card-child">
               <div className="favorite">
-                <Heart></Heart>
+              <i style={{'fontSize': '25px'}} className="fa-solid fa-heart"></i>
               </div>
-              <div className="image">
+              <div className="image" onClick={()=>{
+              setPostDetails(product)
+              navigate('/view/post')
+            }}>
                 <img src={product.url} alt="" />
               </div>
-              <div className="content">
+              <div className="content" onClick={()=>{
+              setPostDetails(product)
+              navigate('/view/post')
+            }}>
                 <p className="rate">&#x20B9; {product.price}</p>
                 <span className="kilometer">{product.category}</span>
                 <p className="name"> {product.name}</p>
