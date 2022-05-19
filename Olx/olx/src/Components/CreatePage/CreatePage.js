@@ -3,9 +3,10 @@ import "./CreatePage.css";
 import { FirebaseContext, AuthContext } from "../../store/Context";
 import { useNavigate } from "react-router-dom";
 import Loader from "../Loader/Loader";
+import Block from '../Block/Block'
 
 function CreatePage() {
-  const [block, setBlock] = useState(initialState);
+  const [block, setBlock] = useState(false);
   const [name, setName] = useState("");
   const [category, setCategory] = useState("");
   const [price, setPrice] = useState();
@@ -52,76 +53,77 @@ function CreatePage() {
   };
 
   return (
-    <card>
-      {loader ? <Loader/> :<div className="create-container">
-        <form
-          onSubmit={formSubmit}
-        >
-          <label htmlFor="fname">Name</label>
-          <br />
-          <input
-            className="input"
-            value={name}
-            onChange={(e) => {
-              setName(e.target.value);
-            }}
-            type="text"
-            id="fname"
-            name="Name"
-            defaultValue="John"
-          />
-          <br />
-          <label htmlFor="fname">Category</label>
-          <br />
-          <input
-            className="input"
-            type="text"
-            value={category}
-            id="fname"
-            onChange={(e) => {
-              setCategory(e.target.value);
-            }}
-            name="category"
-          />
-          <br />
-          <label htmlFor="fname">Price</label>
-          <br />
-          <input
-            className="input"
-            value={price}
-            onChange={(e) => {
-              setPrice(e.target.value);
-            }}
-            type="number"
-            id="fname"
-            name="Price"
-          />
-          <br />
+    <Block/>
+  //   <card>
+  //     {loader ? <Loader/> :<div className="create-container">
+  //       <form
+  //         onSubmit={formSubmit}
+  //       >
+  //         <label htmlFor="fname">Name</label>
+  //         <br />
+  //         <input
+  //           className="input"
+  //           value={name}
+  //           onChange={(e) => {
+  //             setName(e.target.value);
+  //           }}
+  //           type="text"
+  //           id="fname"
+  //           name="Name"
+  //           defaultValue="John"
+  //         />
+  //         <br />
+  //         <label htmlFor="fname">Category</label>
+  //         <br />
+  //         <input
+  //           className="input"
+  //           type="text"
+  //           value={category}
+  //           id="fname"
+  //           onChange={(e) => {
+  //             setCategory(e.target.value);
+  //           }}
+  //           name="category"
+  //         />
+  //         <br />
+  //         <label htmlFor="fname">Price</label>
+  //         <br />
+  //         <input
+  //           className="input"
+  //           value={price}
+  //           onChange={(e) => {
+  //             setPrice(e.target.value);
+  //           }}
+  //           type="number"
+  //           id="fname"
+  //           name="Price"
+  //         />
+  //         <br />
 
-          <br />
-          <img
-            alt="Posts"
-            width="200px"
-            height="200px"
-            src={`${state ? URL.createObjectURL(image) : ""}`}
-            className="mb-2"
-          ></img>
+  //         <br />
+  //         <img
+  //           alt="Posts"
+  //           width="200px"
+  //           height="200px"
+  //           src={`${state ? URL.createObjectURL(image) : ""}`}
+  //           className="mb-2"
+  //         ></img>
 
-          <br />
-          <input
-            onChange={(e) => {
-              setImage(e.target.files[0]);
-              setState(true);
-            }}
-            type="file"
-          />
-          <br />
-          <button type="submit" className="uploadBtn">
-            upload and Submit
-          </button>
-        </form>
-      </div>}
-      </card>
+  //         <br />
+  //         <input
+  //           onChange={(e) => {
+  //             setImage(e.target.files[0]);
+  //             setState(true);
+  //           }}
+  //           type="file"
+  //         />
+  //         <br />
+  //         <button type="submit" className="uploadBtn">
+  //           upload and Submit
+  //         </button>
+  //       </form>
+  //     </div>}
+  //     </card>
   );
 }
 
