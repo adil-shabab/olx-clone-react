@@ -9,6 +9,7 @@ import Arrow from "../../assets/Arrow";
 import { AuthContext, FirebaseContext } from "../../store/Context";
 
 function Header() {
+  const [language, setLanguage] = useState(true);
   const [logout, setLogout] = useState(false);
   const { user } = useContext(AuthContext);
   const { firebase } = useContext(FirebaseContext);
@@ -96,7 +97,13 @@ function Header() {
 
         <i
         onClick={()=>{
-          setActive('active')
+          setActive((prevState)=>{
+            if(prevState == ''){
+              return 'active'
+            }else{
+              return ''
+            }
+          })
         }} class="fa-solid fa-bars menu"></i>
       </div>
       <div className={`shadow bg-white menu-opt ${active}`}>
