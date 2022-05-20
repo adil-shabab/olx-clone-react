@@ -26,6 +26,7 @@
     background: transparent;
     border: none;
     outline: none;
+    position: relative;
   }
   .card-child{
       cursor: pointer;
@@ -67,4 +68,17 @@
   }
   .favorite i{
     color: rgb(0, 0, 0);
+  }
+  .favorite .color{
+    color: red;
+  }
+  .feature{
+    position: absolute;
+    top: 25px;
+    cursor: pointer;
+    left: 0;
+    color: white;
+    border-radius: 10px;
+    background: rgb(238, 86, 10);
+    padding: 3px 20px;
   }

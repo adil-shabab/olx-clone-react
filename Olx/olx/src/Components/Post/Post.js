@@ -15,6 +15,10 @@ const navigate = useNavigate()
 
 
 
+
+
+
+
 useEffect(()=>{
   firebase.firestore().collection('Products').get().then((snapshot)=>{
     const allPost = snapshot.docs.map((product)=>{
@@ -43,7 +47,7 @@ useEffect(()=>{
              className="card col-lg-3 col-md-4 col-sm-6 col-xsm-12">
             <div className="p-3 bg-white shadow w-100 card-child">
               <div className="favorite">
-              <i style={{'fontSize': '25px'}} className="fa-solid fa-heart"></i>
+              <i style={{'fontSize': '25px'}} className='fa-solid fa-heart'></i>
               </div>
               <div className="image" onClick={()=>{
               setPostDetails(product)
@@ -63,6 +67,7 @@ useEffect(()=>{
                 <span>{product.createdAt}</span>
               </div>
             </div>
+            <div className="feature"><h6>Featured</h6></div>
           </div>
            )
          }) }
