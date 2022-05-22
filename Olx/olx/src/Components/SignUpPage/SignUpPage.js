@@ -90,11 +90,12 @@ function SignUpPage() {
             id="password"
             name="password"
           />
-          <p className='text-danger'>password must contain 8 characters</p>
+          <p className='text-danger d-flex justify-content-center align-items-center'>password must contain 8 characters</p>
           <br />
           <br />
           <button>Signup</button>
         </form>
+        
         <Link to='/login' style={{'textDecoration': 'none', 'color': 'black'}}>Login</Link>
       </div>
     </div>
