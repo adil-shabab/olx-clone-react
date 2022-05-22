@@ -60,6 +60,7 @@ function CreatePage() {
           <label htmlFor="fname">Name</label>
           <br />
           <input
+            required
             className="input"
             value={name}
             onChange={(e) => {
@@ -74,6 +75,7 @@ function CreatePage() {
           <label htmlFor="fname">Category</label>
           <br />
           <input
+            required
             className="input"
             type="text"
             value={category}
@@ -87,6 +89,7 @@ function CreatePage() {
           <label htmlFor="fname">Price</label>
           <br />
           <input
+            required
             className="input"
             value={price}
             onChange={(e) => {
@@ -109,6 +112,7 @@ function CreatePage() {
 
           <br />
           <input
+            required
             onChange={(e) => {
               setImage(e.target.files[0]);
               setState(true);

@@ -90,6 +90,7 @@ function SignUpPage() {
             id="password"
             name="password"
           />
+          <p className='text-danger'>password must contain 8 characters</p>
           <br />
           <br />
           <button>Signup</button>
